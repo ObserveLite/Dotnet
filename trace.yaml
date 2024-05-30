@@ -1,0 +1,17 @@
+server:
+  log_level: debug
+traces:
+  configs:
+    - name: integrations
+      service_graphs:
+        enabled: true
+      receivers:
+        otlp:
+          protocols:
+            grpc:
+              endpoint: "localhost:4317"
+            http:
+              endpoint: "localhost:4318"
+      remote_write:
+        - endpoint: "http://13.127.108.58:4317"
+          insecure: true 
