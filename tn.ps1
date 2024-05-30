@@ -6,3 +6,6 @@ Install-OpenTelemetryCore
 
 # Setup IIS instrumentation
 Register-OpenTelemetryForIIS
+
+
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
